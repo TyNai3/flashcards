@@ -29,7 +29,6 @@ router.post('/:topic_id/:questionId', async (req, res) => {
     const { questionId } = req.params;
     console.log(req.params);
     const question = await Question.findOne({ where: { id: questionId } });
-    // console.log(question);
     res.json(question);
     res.end();
   } catch (error) {
