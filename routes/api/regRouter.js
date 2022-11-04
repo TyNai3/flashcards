@@ -7,7 +7,7 @@ router.post('/registration', async (req, res) => {
     const {
       login, email, password, passwordConfirm,
     } = req.body;
-    const findUser = await User.findOne({ // findOne, findAll, update,create,destroi
+    const findUser = await User.findOne({
       where: {
         email,
       },
