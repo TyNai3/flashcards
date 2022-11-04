@@ -29,3 +29,25 @@ questionList.addEventListener('click', async (event) => {
       .then((gif) => container.insertAdjacentHTML('beforeend', `<p>Почти угадали! Правильный ответ: ${data.answer}</p><img src=${gif.image}>`));
   }
 })
+
+
+questionList.addEventListener('click', async (event) => {
+  const isBtn = event.target.classList.contains('btn-warning');
+  // console.log(isBtn);
+  if (!isBtn) {
+    return;
+  }
+  const container = event.target.closest('.container');
+  // console.log(container.dataset.id);
+  const questionId = Number(container.dataset.id) + 1;
+  console.log(questionId);
+  const topic_id = document.querySelector('.container').dataset.topic;
+  console.log(topic_id);
+  const response = await fetch(`/${topic_id}/questions/${questionId}`, {
+    method: 'GET',
+  });
+  const data = await response.text();
+  window.location.replace(`/${topic_id}/questions/${questionId}`);
+
+  console.log(data);
+});
