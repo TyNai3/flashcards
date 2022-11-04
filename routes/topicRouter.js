@@ -27,9 +27,8 @@ router.get('/:topic_id', async (req, res) => {
 router.post('/:topic_id/:questionId', async (req, res) => {
   try {
     const { questionId } = req.params;
-    console.log(req.params);
+    // console.log(req.params);
     const question = await Question.findOne({ where: { id: questionId } });
-    // console.log(question);
     res.json(question);
     res.end();
   } catch (error) {

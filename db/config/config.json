@@ -1,23 +1,23 @@
 {
   "development": {
     "username": "postgres",
-    "password": "postgres",
+    "password": null,
     "database": "flashcardss",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "root",
+    "username": "postgres",
     "password": null,
-    "database": "database_test",
+    "database": "flashcardss",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   },
   "production": {
-    "username": "root",
+    "username": "postgres",
     "password": null,
-    "database": "database_production",
+    "database": "flashcardss",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   }
 }
