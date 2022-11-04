@@ -33,6 +33,7 @@ router.post('/registration', async (req, res) => {
     });
 
     newUser.save();
+    req.session.user_id = newUser.id;
 
     return res.status(200).json({ status: 'success', url: '/topics' });
   } catch (error) {
