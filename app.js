@@ -6,6 +6,7 @@ const app = express();
 
 const mainRouter = require('./routes/mainRouter');
 const topicRouter = require('./routes/topicRouter');
+const questionsRouter = require('./routes/questionRouter');
 
 app.use(express.static('public'));
 app.use(ssr);
@@ -19,7 +20,11 @@ const registrationRouter = require('./routes/render/registrationRouter');
 
 app.use('/', mainRouter);
 app.use('/topics', topicRouter);
+
 app.use('/registration', registrationRouter);
+
+app.use('/', questionsRouter);
+
 
 const PORT = 3000;
 
