@@ -19,17 +19,18 @@ questionList.addEventListener('click', async (event) => {
   });
   const data = await response.json();
   console.log(data.answer);
-  if (answer === data.answer) {
+  let score = 0;
+  if (answer.toLowerCase() === data.answer.toLowerCase()) {
+    score += 1;
     await fetch('https://yesno.wtf/api?force=yes')
       .then((answergif) => answergif.json())
-      .then((gif) => container.insertAdjacentHTML('beforeend', `<p>Верно!</p><img src=${gif.image}>`));
+      .then((gif) => container.insertAdjacentHTML('beforeend', `<p>Верно!</p><p>${score}</p><img src=${gif.image}>`));
   } else {
     await fetch('https://yesno.wtf/api?force=no')
       .then((answergif) => answergif.json())
       .then((gif) => container.insertAdjacentHTML('beforeend', `<p>Почти угадали! Правильный ответ: ${data.answer}</p><img src=${gif.image}>`));
   }
-})
-
+});
 
 questionList.addEventListener('click', async (event) => {
   const isBtn = event.target.classList.contains('btn-warning');
