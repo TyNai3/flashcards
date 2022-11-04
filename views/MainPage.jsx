@@ -10,7 +10,7 @@ function MainPage() {
         <button className ="play">Play</button>
         
         
-    
+        <script defer src="/js/mainclient.js" />
       </div>
 
     </Layout>

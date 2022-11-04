@@ -22,15 +22,7 @@ function QuestionPage({ topics, question}) {
             placeholder="Название"
           />
         </div>
-        <div className="form__control">
-          <label htmlFor="titleInput">Изображение</label>
-          <input
-            id="titleInput"
-            name="image"
-            type="url"
-            placeholder="Фото"
-          />
-        </div>
+
 
         <button type="submit" className="addBtn">Добавить</button>
         <div className="resultAdd" />
