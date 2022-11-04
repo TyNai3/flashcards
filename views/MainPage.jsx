@@ -7,13 +7,18 @@ function MainPage() {
 
       <div className="container">
         <p>Flashcards</p>
-        <button id ="play">Play</button>
-        
-        
+        <button id="play">Play</button>
+
+
+
         <script defer src="/js/mainclient.js" />
       </div>
+      <div >
+        <img style={{ width: '800px' }} src="/images/123.jpg" alt="flashcard" />
+      </div>
 
-    </Layout>
+
+    </Layout >
   );
 }
 module.exports = MainPage;
