@@ -4,6 +4,7 @@ function Header({ user }) {
   return (
     <>
       {user ? (
+        <div className="container">
         <div className="header-container">
           <ul className="navbar">
             <li className="navbar-item">
@@ -16,12 +17,11 @@ function Header({ user }) {
             <li className="navbar-item">
               <a className="nav-link" href="/result">Результат</a>
             </li>
-
-
-
           </ul>
         </div>
+        </div>
       ) : (
+        <div className="container">
         <div className="header-container">
           <ul className="navbar">
             <li className="navbar-item">
@@ -32,6 +32,7 @@ function Header({ user }) {
             </li>
 
           </ul>
+        </div>
         </div>
       )}
       <link rel="stylesheet" href="/css/headerStyle.css" />
