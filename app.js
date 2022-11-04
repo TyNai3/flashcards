@@ -13,11 +13,18 @@ app.use(ssr);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// routes
+//* Подключить Роутеры
+const registrationRouter = require('./routes/render/registrationRouter');
+
+//* Запустить роутеры
+
 app.use('/', mainRouter);
 app.use('/topics', topicRouter);
+
+app.use('/registration', registrationRouter);
+
 app.use('/', questionsRouter);
-//test g
+
 
 const PORT = 3000;
 
