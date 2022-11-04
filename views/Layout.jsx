@@ -1,8 +1,9 @@
 const React = require('react');
-
+const Header = require('./Header');
 
 function Layout({ children, user }) {
   return (
+   
     <html lang="en">
       <head>
         <meta charSet="UTF-8" />
