@@ -42,13 +42,13 @@ questionList.addEventListener('click', async (event) => {
   // console.log(container.dataset.id);
   const questionId = Number(container.dataset.id) + 1;
   console.log(questionId);
-  const topic_id = container.dataset.topic;
+  const topic_id = document.querySelector('.container').dataset.topic;
   console.log(topic_id);
-  const response = await fetch(`/questions/${topic_id}/questions/${questionId}`, {
+  const response = await fetch(`/${topic_id}/questions/${questionId}`, {
     method: 'GET',
   });
   const data = await response.text();
-  window.location.replace(`/questions/${topic_id}/questions/${questionId}`);
+  window.location.replace(`/${topic_id}/questions/${questionId}`);
 
   console.log(data);
 });

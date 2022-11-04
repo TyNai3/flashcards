@@ -8,9 +8,8 @@ form.addEventListener('submit', async (event) => {
     const email = event.target.email.value;
     const passwordConfirm = event.target.passwordConfirm.value;
 
-
-    const response = await fetch('/api/registration', {
-
+    await fetch('/registration');
+    const response = await fetch('/registration', {
       method: 'POST',
       headers: { 'Content-Type': 'Application/json' },
       body: JSON.stringify({
