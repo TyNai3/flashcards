@@ -10,9 +10,7 @@ function TopicPage({ topics}) {
           {topics.map((topic) => (
             <li key={topic.id}>
               <a href={`/topics/${topic.id}`}>
-                Theme
-                {' '}
-                { }
+
                 {topic.title}
               </a>
             </li>

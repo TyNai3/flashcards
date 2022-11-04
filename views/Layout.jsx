@@ -14,7 +14,7 @@ function Layout({ children, user }) {
       <body>
         <Header user={user} />
         {children}
-        <Footer />
+  
       </body>
     </html>
   );

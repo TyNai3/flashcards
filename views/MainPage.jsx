@@ -7,7 +7,7 @@ function MainPage() {
 
       <div className="container">
         <p>Flashcards</p>
-        <button className ="play">Play</button>
+        <button id ="play">Play</button>
         
         
         <script defer src="/js/mainclient.js" />

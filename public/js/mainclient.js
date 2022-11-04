@@ -1,5 +1,6 @@
-const playBtn = document.querySelector('.play');
+const playBtn = document.querySelector('#play');
 
-playBtn.addEventListener('click', async (event) => {
-
-    window.location.href = '/topics';
+playBtn.addEventListener('click', (event) => {
+  event.preventDefault();
+  window.location.href = '/topics';
+});

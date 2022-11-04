@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const TopicPage = require('../views/TopicPage');
+const TopicPage = require('../views/TopicPage.jsx');
 const { Topic } = require('../db/models');
 const { Question } = require('../db/models');
 
