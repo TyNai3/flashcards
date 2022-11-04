@@ -18,7 +18,7 @@ router.get('/:topic_id', async (req, res) => {
     const topic = await Topic.findOne({ where: { id: topic_id } });
     const question = await Question.findAll({ where: { topic_id } });
     const question_id = question[0].id;
-    res.redirect(`/${topic_id}/questions/${question_id}`);
+    res.redirect(`/questions/${topic_id}/questions/${question_id}`);
   } catch (error) {
     console.log(error.message);
   }

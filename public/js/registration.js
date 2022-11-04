@@ -8,7 +8,7 @@ form.addEventListener('submit', async (event) => {
     const email = event.target.email.value;
     const passwordConfirm = event.target.passwordConfirm.value;
 
-    const response = await fetch('registration', {
+    const response = await fetch('/api/registration', {
       method: 'POST',
       headers: { 'Content-Type': 'Application/json' },
       body: JSON.stringify({
@@ -21,7 +21,6 @@ form.addEventListener('submit', async (event) => {
 
 
     const data = await response.json();
-    console.log(data);
     if (data.status === 'success') {
       window.location.assign(data.url);
     }

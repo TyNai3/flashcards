@@ -25,9 +25,6 @@ function Header({ user }) {
         <div className="header-container">
           <ul className="navbar">
             <li className="navbar-item">
-              <a className="nav-link" href="/authentication">Войти</a>
-            </li>
-            <li className="navbar-item">
               <a className="nav-link" href="/registration">Регистрация</a>
             </li>
 

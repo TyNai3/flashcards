@@ -22,10 +22,10 @@ const registrationApiRouter = require('./routes/api/regRouter');
 
 app.use('/', mainRouter);
 app.use('/topics', topicRouter);
-app.use('/', registrationApiRouter);
+app.use('/api', registrationApiRouter);
 app.use('/registration', registrationRouter);
 
-app.use('/', questionsRouter);
+app.use('/questions', questionsRouter);
 
 const PORT = 3000;
 
