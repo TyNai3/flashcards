@@ -41,6 +41,21 @@ module.exports = {
       {
         name: 'Какой древнегреческий историк назвал Египет "дар Нила"?', answer: 'Геродот', topic_id: 2, createdAt: new Date(), updatedAt: new Date(),
       },
+      {
+        name: 'Кто является основателем компании Microsoft ?', answer: 'Билл Гейтс', topic_id: 3, createdAt: new Date(), updatedAt: new Date(),
+      },
+      {
+        name: 'Какое понятие объединяет камень, папирус, бересту, книгу и дискету?', answer: 'Носитель информации ', topic_id: 3, createdAt: new Date(), updatedAt: new Date(),
+      },
+      {
+        name: '«Отцом» Интернета является:', answer: 'Тим Бернерс', topic_id: 3, createdAt: new Date(), updatedAt: new Date(),
+      },
+      {
+        name: 'Какое устройство получило название, «благодаря» оружию?', answer: 'Винчестер', topic_id: 3, createdAt: new Date(), updatedAt: new Date(),
+      },
+      {
+        name: 'Программа, управляющая работой внешних устройств называется?', answer: 'Драйвер', topic_id: 3, createdAt: new Date(), updatedAt: new Date(),
+      },
     ], {});
   },
 
